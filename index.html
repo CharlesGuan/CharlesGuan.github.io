@@ -33,7 +33,7 @@
       min-height: 100vh;
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
       background: var(--vand);
       padding: 0 48px;
@@ -46,317 +46,129 @@
       z-index: 100;
       border-bottom: 2px solid var(--gold);
     }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
+    .nav-left { display: flex; align-items: center; gap: 14px; }
     .nav-seal {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: var(--gold);
+      width: 34px; height: 34px; border-radius: 50%;
+      background: var(--gold); display: flex; align-items: center;
+      justify-content: center; font-family: 'Libre Baskerville', serif;
+      font-size: 14px; font-weight: 700; color: var(--vand); flex-shrink: 0;
+    }
+    .nav-institution { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); font-weight: 300; line-height: 1; }
+    .nav-dept { font-size: 13px; color: rgba(255,255,255,0.85); font-weight: 600; line-height: 1; margin-top: 3px; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-code { font-size: 12px; color: var(--gold-light); letter-spacing: 0.06em; font-weight: 300; }
+
+    /* VISITOR COUNTER */
+    .visitor-badge {
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--vand);
+      gap: 6px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(198,168,75,0.3);
+      border-radius: 20px;
+      padding: 4px 12px 4px 8px;
+      text-decoration: none;
+    }
+    .visitor-badge-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #4CAF50;
+      box-shadow: 0 0 5px rgba(76,175,80,0.7);
       flex-shrink: 0;
     }
-
-    .nav-institution {
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.55);
-      font-weight: 300;
-      line-height: 1;
+    .visitor-badge img {
+      height: 16px;
+      display: block;
     }
 
-    .nav-dept {
-      font-size: 13px;
-      color: rgba(255,255,255,0.85);
-      font-weight: 600;
-      line-height: 1;
-      margin-top: 3px;
-    }
-
-    .nav-code {
-      font-size: 12px;
-      color: var(--gold-light);
-      letter-spacing: 0.06em;
-      font-weight: 300;
-    }
-
-    /* ── HERO ── */
-    .hero {
-      background: var(--vand);
-      padding: 52px 48px 48px;
-    }
-
-    .hero-eyebrow {
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 600;
-      margin-bottom: 14px;
-    }
-
-    .hero-title {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 34px;
-      font-weight: 700;
-      color: #ffffff;
-      line-height: 1.25;
-      max-width: 680px;
-      margin-bottom: 16px;
-    }
-
-    .hero-desc {
-      font-size: 15px;
-      color: rgba(255,255,255,0.55);
-      font-weight: 300;
-      max-width: 560px;
-      line-height: 1.7;
-      margin-bottom: 32px;
-    }
-
-    .hero-meta {
-      display: flex;
-      gap: 36px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(198,168,75,0.25);
-    }
-
+    /* HERO */
+    .hero { background: var(--vand); padding: 52px 48px 48px; }
+    .hero-eyebrow { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 14px; }
+    .hero-title { font-family: 'Libre Baskerville', serif; font-size: 34px; font-weight: 700; color: #ffffff; line-height: 1.25; max-width: 680px; margin-bottom: 16px; }
+    .hero-desc { font-size: 15px; color: rgba(255,255,255,0.55); font-weight: 300; max-width: 560px; line-height: 1.7; margin-bottom: 32px; }
+    .hero-meta { display: flex; gap: 36px; padding-top: 24px; border-top: 1px solid rgba(198,168,75,0.25); flex-wrap: wrap; }
     .meta-item { display: flex; flex-direction: column; gap: 4px; }
+    .meta-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.3); font-weight: 400; }
+    .meta-val { font-size: 14px; color: rgba(255,255,255,0.8); font-weight: 400; }
 
-    .meta-label {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: rgba(255,255,255,0.3);
-      font-weight: 400;
-    }
-
-    .meta-val {
-      font-size: 14px;
-      color: rgba(255,255,255,0.8);
-      font-weight: 400;
-    }
-
-    /* ── OUTLINE ── */
+    /* COURSE OUTLINE */
     .outline-section {
       background: var(--cream);
       border-bottom: 1px solid var(--border);
-      padding: 40px 0;
+      padding: 48px 0;
     }
-
     .outline-inner {
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 48px;
     }
-
-    /* ── MAIN ── */
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 48px 48px 72px;
+    .outline-img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: block;
+      margin-top: 24px;
     }
+
+    /* MAIN */
+    main { max-width: 1100px; margin: 0 auto; padding: 48px 48px 72px; }
 
     .section-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 24px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--border);
+      display: flex; align-items: baseline; justify-content: space-between;
+      margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--border);
     }
+    .section-title { font-family: 'Libre Baskerville', serif; font-size: 20px; font-weight: 700; color: var(--text); }
+    .section-subtitle { font-size: 13px; color: var(--text-muted); }
 
-    .section-title {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    .section-subtitle {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    /* ── GRID ── */
-    .slides-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 16px;
-    }
+    /* GRID */
+    .slides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
 
     .slide-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+      overflow: hidden; text-decoration: none; color: inherit; display: flex;
+      flex-direction: column; transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
     }
-
-    .slide-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(26,39,68,0.10);
-      border-color: rgba(198,168,75,0.5);
-    }
+    .slide-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,39,68,0.10); border-color: rgba(198,168,75,0.5); }
 
     .card-thumb {
-      height: 110px;
-      background: var(--cream);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      border-bottom: 1px solid var(--border);
-      overflow: hidden;
+      height: 110px; background: var(--cream); display: flex; align-items: center;
+      justify-content: center; position: relative; border-bottom: 1px solid var(--border); overflow: hidden;
     }
-
-    .card-thumb::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(26,39,68,0.04) 0%, transparent 60%);
-    }
-
+    .card-thumb::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,39,68,0.04) 0%, transparent 60%); }
     .week-badge {
-      position: absolute;
-      top: 10px;
-      left: 12px;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--vand-mid);
-      background: rgba(198,168,75,0.22);
-      padding: 3px 8px;
-      border-radius: 3px;
+      position: absolute; top: 10px; left: 12px; font-size: 10px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--vand-mid);
+      background: rgba(198,168,75,0.22); padding: 3px 8px; border-radius: 3px;
     }
+    .pdf-icon { width: 38px; height: 48px; opacity: 0.22; }
 
-    .pdf-icon {
-      width: 38px;
-      height: 48px;
-      opacity: 0.22;
-    }
+    .card-body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; gap: 5px; }
+    .card-week { font-size: 11px; font-weight: 600; color: var(--gold); letter-spacing: 0.06em; text-transform: uppercase; }
+    .card-title { font-family: 'Libre Baskerville', serif; font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.35; }
+    .card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-top: 2px; flex: 1; }
+    .card-footer { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .pdf-tag { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #2B3F6B; background: #EDF1F8; padding: 3px 8px; border-radius: 3px; }
+    .download-arrow { font-size: 14px; color: var(--text-muted); transition: color 0.15s, transform 0.15s; }
+    .slide-card:hover .download-arrow { color: var(--gold); transform: translateX(2px); }
 
-    .card-body {
-      padding: 14px 16px 16px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-
-    .card-week {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--gold);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .card-title {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text);
-      line-height: 1.35;
-    }
-
-    .card-desc {
-      font-size: 12px;
-      color: var(--text-muted);
-      line-height: 1.5;
-      margin-top: 2px;
-      flex: 1;
-    }
-
-    .card-footer {
-      margin-top: 12px;
-      padding-top: 10px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .pdf-tag {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #2B3F6B;
-      background: #EDF1F8;
-      padding: 3px 8px;
-      border-radius: 3px;
-    }
-
-    .download-arrow {
-      font-size: 14px;
-      color: var(--text-muted);
-      transition: color 0.15s, transform 0.15s;
-    }
-
-    .slide-card:hover .download-arrow {
-      color: var(--gold);
-      transform: translateX(2px);
-    }
-
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer {
-      background: var(--vand);
-      padding: 28px 48px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      border-top: 2px solid var(--gold);
+      background: var(--vand); padding: 28px 48px; display: flex;
+      align-items: center; justify-content: space-between; flex-wrap: wrap;
+      gap: 12px; border-top: 2px solid var(--gold);
     }
+    .footer-left { display: flex; flex-direction: column; gap: 4px; }
+    .footer-title { font-size: 13px; color: rgba(255,255,255,0.75); font-weight: 600; }
+    .footer-sub { font-size: 12px; color: rgba(255,255,255,0.35); font-weight: 300; }
+    .footer-right { font-size: 12px; color: rgba(255,255,255,0.35); }
 
-    .footer-left {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .footer-title {
-      font-size: 13px;
-      color: rgba(255,255,255,0.75);
-      font-weight: 600;
-    }
-
-    .footer-sub {
-      font-size: 12px;
-      color: rgba(255,255,255,0.35);
-      font-weight: 300;
-    }
-
-    .footer-right {
-      font-size: 12px;
-      color: rgba(255,255,255,0.35);
-    }
-
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 700px) {
-      nav, .hero, main, footer { padding-left: 20px; padding-right: 20px; }
+      nav { padding-left: 16px; padding-right: 16px; }
+      .hero, .outline-inner, main, footer { padding-left: 20px; padding-right: 20px; }
       .hero-title { font-size: 24px; }
-      .hero-meta { gap: 20px; flex-wrap: wrap; }
+      .hero-meta { gap: 20px; }
       .slides-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+      .visitor-badge span { display: none; }
     }
   </style>
 </head>
@@ -370,33 +182,24 @@
         <div class="nav-dept">Data Science Institute</div>
       </div>
     </div>
-    <div class="nav-code">DS5899</div>
+    <div class="nav-right">
+      <div class="nav-code">DS5899</div>
+      <a class="visitor-badge" href="https://hits.sh/CharlesGuan.github.io/" target="_blank" title="Page visit count">
+        <div class="visitor-badge-dot"></div>
+        <img src="https://hits.sh/CharlesGuan.github.io.svg?style=flat&label=visits&color=C6A84B&labelColor=1A2744" alt="Visitor count" />
+      </a>
+    </div>
   </nav>
 
   <div class="hero">
     <div class="hero-eyebrow">DS5899 · Special Topics in Data Science</div>
     <h1 class="hero-title">Leveraging NLP in Asset Management</h1>
-    <p class="hero-desc">
-      Course lecture slides covering large language models, attention mechanisms, reinforcement learning,
-      and AI applications in financial asset management.
-    </p>
+    <p class="hero-desc">Course lecture slides covering large language models, attention mechanisms, reinforcement learning, and AI applications in financial asset management.</p>
     <div class="hero-meta">
-      <div class="meta-item">
-        <span class="meta-label">Institution</span>
-        <span class="meta-val">Vanderbilt University</span>
-      </div>
-      <div class="meta-item">
-        <span class="meta-label">Department</span>
-        <span class="meta-val">Data Science Institute</span>
-      </div>
-      <div class="meta-item">
-        <span class="meta-label">Lectures</span>
-        <span class="meta-val">12 Weeks</span>
-      </div>
-      <div class="meta-item">
-        <span class="meta-label">Format</span>
-        <span class="meta-val">PDF Slides</span>
-      </div>
+      <div class="meta-item"><span class="meta-label">Institution</span><span class="meta-val">Vanderbilt University</span></div>
+      <div class="meta-item"><span class="meta-label">Department</span><span class="meta-val">Data Science Institute</span></div>
+      <div class="meta-item"><span class="meta-label">Lectures</span><span class="meta-val">12 Weeks</span></div>
+      <div class="meta-item"><span class="meta-label">Format</span><span class="meta-val">PDF Slides</span></div>
     </div>
   </div>
 
@@ -406,7 +209,7 @@
         <h2 class="section-title">Course Outline</h2>
         <span class="section-subtitle">12-week curriculum</span>
       </div>
-      <img src="course_outline.png" alt="Course outline showing 12 weeks of topics from Introduction through Agent" style="width:100%; border-radius:10px; border:1px solid rgba(0,0,0,0.08);" />
+      <img class="outline-img" src="course_outline.png" alt="Course outline showing 12 weeks from Introduction through Agent" />
     </div>
   </div>
 
@@ -418,279 +221,159 @@
 
     <div class="slides-grid">
 
-      <!-- Week 1 -->
       <a class="slide-card" href="week01_introduction.pdf" target="_blank">
         <div class="card-thumb">
           <span class="week-badge">Week 1</span>
-          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/>
-            <path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/>
-            <rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/>
-          </svg>
+          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none"><path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/><path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/><rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/></svg>
         </div>
         <div class="card-body">
           <div class="card-week">Week 1</div>
           <div class="card-title">Introduction</div>
           <div class="card-desc">Scaling Laws, Common AI Tasks in Asset Management, and AI Impact</div>
-          <div class="card-footer">
-            <span class="pdf-tag">PDF</span>
-            <span class="download-arrow">→</span>
-          </div>
+          <div class="card-footer"><span class="pdf-tag">PDF</span><span class="download-arrow">→</span></div>
         </div>
       </a>
 
-      <!-- Week 2 -->
       <a class="slide-card" href="week02_attention.pdf" target="_blank">
         <div class="card-thumb">
           <span class="week-badge">Week 2</span>
-          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/>
-            <path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/>
-            <rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/>
-          </svg>
+          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none"><path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/><path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/><rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/></svg>
         </div>
         <div class="card-body">
           <div class="card-week">Week 2</div>
           <div class="card-title">Attention</div>
           <div class="card-desc">Understanding Attention Mechanism, KV Cache and Inference Engine</div>
-          <div class="card-footer">
-            <span class="pdf-tag">PDF</span>
-            <span class="download-arrow">→</span>
-          </div>
+          <div class="card-footer"><span class="pdf-tag">PDF</span><span class="download-arrow">→</span></div>
         </div>
       </a>
 
-      <!-- Week 3 -->
       <a class="slide-card" href="week03_nvidia_hardware.pdf" target="_blank">
         <div class="card-thumb">
           <span class="week-badge">Week 3</span>
-          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/>
-            <path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/>
-            <rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/>
-          </svg>
+          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none"><path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/><path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/><rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/></svg>
         </div>
         <div class="card-body">
           <div class="card-week">Week 3</div>
           <div class="card-title">NVIDIA Hardware</div>
           <div class="card-desc">Evolution of AI Infrastructure and Computing Paradigms</div>
-          <div class="card-footer">
-            <span class="pdf-tag">PDF</span>
-            <span class="download-arrow">→</span>
-          </div>
+          <div class="card-footer"><span class="pdf-tag">PDF</span><span class="download-arrow">→</span></div>
         </div>
       </a>
 
-      <!-- Week 4 -->
       <a class="slide-card" href="week04_memory.pdf" target="_blank">
         <div class="card-thumb">
           <span class="week-badge">Week 4</span>
-          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/>
-            <path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/>
-            <rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/>
-          </svg>
+          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none"><path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/><path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/><rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/></svg>
         </div>
         <div class="card-body">
           <div class="card-week">Week 4</div>
           <div class="card-title">Memory</div>
           <div class="card-desc">Memory Augmentation Strategies: Sparsity and Scalable Lookup</div>
-          <div class="card-footer">
-            <span class="pdf-tag">PDF</span>
-            <span class="download-arrow">→</span>
-          </div>
+          <div class="card-footer"><span class="pdf-tag">PDF</span><span class="download-arrow">→</span></div>
         </div>
       </a>
 
-      <!-- Week 5 -->
       <a class="slide-card" href="week05_infrastructure_optimization.pdf" target="_blank">
         <div class="card-thumb">
           <span class="week-badge">Week 5</span>
-          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/>
-            <path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/>
-            <rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/>
-          </svg>
+          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none"><path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/><path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/><rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/></svg>
         </div>
         <div class="card-body">
           <div class="card-week">Week 5</div>
           <div class="card-title">Infrastructure &amp; Optimization</div>
           <div class="card-desc">LLM Training Using Parallel Computation and Quantization</div>
-          <div class="card-footer">
-            <span class="pdf-tag">PDF</span>
-            <span class="download-arrow">→</span>
-          </div>
+          <div class="card-footer"><span class="pdf-tag">PDF</span><span class="download-arrow">→</span></div>
         </div>
       </a>
 
-      <!-- Week 6 -->
       <a class="slide-card" href="week06_llm_training.pdf" target="_blank">
         <div class="card-thumb">
           <span class="week-badge">Week 6</span>
-          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/>
-            <path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/>
-            <rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/>
-          </svg>
+          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none"><path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/><path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/><rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/></svg>
         </div>
         <div class="card-body">
           <div class="card-week">Week 6</div>
           <div class="card-title">LLM Training</div>
           <div class="card-desc">LLM Training Process and a New Paradigm for Shifting Toward Reasoning Models</div>
-          <div class="card-footer">
-            <span class="pdf-tag">PDF</span>
-            <span class="download-arrow">→</span>
-          </div>
+          <div class="card-footer"><span class="pdf-tag">PDF</span><span class="download-arrow">→</span></div>
         </div>
       </a>
 
-      <!-- Week 7 -->
       <a class="slide-card" href="week07_multi_token_prediction.pdf" target="_blank">
         <div class="card-thumb">
           <span class="week-badge">Week 7</span>
-          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/>
-            <path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/>
-            <rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/>
-          </svg>
+          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none"><path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/><path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/><rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/></svg>
         </div>
         <div class="card-body">
           <div class="card-week">Week 7</div>
           <div class="card-title">Multi-Token Prediction</div>
           <div class="card-desc">Multi-Token Prediction, Speculative Decoding, and Time-Series Foundation Models</div>
-          <div class="card-footer">
-            <span class="pdf-tag">PDF</span>
-            <span class="download-arrow">→</span>
-          </div>
+          <div class="card-footer"><span class="pdf-tag">PDF</span><span class="download-arrow">→</span></div>
         </div>
       </a>
 
-      <!-- Week 8 -->
       <a class="slide-card" href="week08_prompting.pdf" target="_blank">
         <div class="card-thumb">
           <span class="week-badge">Week 8</span>
-          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/>
-            <path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/>
-            <rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/>
-          </svg>
+          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none"><path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/><path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/><rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/></svg>
         </div>
         <div class="card-body">
           <div class="card-week">Week 8</div>
           <div class="card-title">Prompting</div>
           <div class="card-desc">Prompting, RAG, and ICL as Implicit Bayesian Inference</div>
-          <div class="card-footer">
-            <span class="pdf-tag">PDF</span>
-            <span class="download-arrow">→</span>
-          </div>
+          <div class="card-footer"><span class="pdf-tag">PDF</span><span class="download-arrow">→</span></div>
         </div>
       </a>
 
-      <!-- Week 9 -->
       <a class="slide-card" href="week09_reasoning.pdf" target="_blank">
         <div class="card-thumb">
           <span class="week-badge">Week 9</span>
-          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/>
-            <path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/>
-            <rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/>
-          </svg>
+          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none"><path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/><path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/><rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/></svg>
         </div>
         <div class="card-body">
           <div class="card-week">Week 9</div>
           <div class="card-title">Reasoning</div>
           <div class="card-desc">CoT Prompting and Reasoning with Outcome or Process Rewards</div>
-          <div class="card-footer">
-            <span class="pdf-tag">PDF</span>
-            <span class="download-arrow">→</span>
-          </div>
+          <div class="card-footer"><span class="pdf-tag">PDF</span><span class="download-arrow">→</span></div>
         </div>
       </a>
 
-      <!-- Week 10 -->
       <a class="slide-card" href="week10_rl_framework.pdf" target="_blank">
         <div class="card-thumb">
           <span class="week-badge">Week 10</span>
-          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/>
-            <path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/>
-            <rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/>
-          </svg>
+          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none"><path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/><path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/><rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/></svg>
         </div>
         <div class="card-body">
           <div class="card-week">Week 10</div>
           <div class="card-title">RL Framework</div>
           <div class="card-desc">RL Framework, RLHF and RL at Different Stages</div>
-          <div class="card-footer">
-            <span class="pdf-tag">PDF</span>
-            <span class="download-arrow">→</span>
-          </div>
+          <div class="card-footer"><span class="pdf-tag">PDF</span><span class="download-arrow">→</span></div>
         </div>
       </a>
 
-      <!-- Week 11 -->
       <a class="slide-card" href="week11_rl_policy.pdf" target="_blank">
         <div class="card-thumb">
           <span class="week-badge">Week 11</span>
-          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/>
-            <path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/>
-            <rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/>
-          </svg>
+          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none"><path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/><path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/><rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/></svg>
         </div>
         <div class="card-body">
           <div class="card-week">Week 11</div>
           <div class="card-title">RL Policy</div>
           <div class="card-desc">RL Policy Models, Self-Improvement, and Domain-Specific RL</div>
-          <div class="card-footer">
-            <span class="pdf-tag">PDF</span>
-            <span class="download-arrow">→</span>
-          </div>
+          <div class="card-footer"><span class="pdf-tag">PDF</span><span class="download-arrow">→</span></div>
         </div>
       </a>
 
-      <!-- Week 12 -->
       <a class="slide-card" href="week12_agent.pdf" target="_blank">
         <div class="card-thumb">
           <span class="week-badge">Week 12</span>
-          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/>
-            <path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/>
-            <rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/>
-            <rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/>
-          </svg>
+          <svg class="pdf-icon" viewBox="0 0 38 48" fill="none"><path d="M6 0h20l12 12v30a6 6 0 01-6 6H6a6 6 0 01-6-6V6a6 6 0 016-6z" fill="#1A2744"/><path d="M26 0l12 12H32a6 6 0 01-6-6V0z" fill="#C6A84B"/><rect x="8" y="20" width="22" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="26" width="16" height="2" rx="1" fill="white" opacity="0.5"/><rect x="8" y="32" width="19" height="2" rx="1" fill="white" opacity="0.5"/></svg>
         </div>
         <div class="card-body">
           <div class="card-week">Week 12</div>
           <div class="card-title">Agent</div>
           <div class="card-desc">Agent Components, Protocols, Skills and Context Engineering</div>
-          <div class="card-footer">
-            <span class="pdf-tag">PDF</span>
-            <span class="download-arrow">→</span>
-          </div>
+          <div class="card-footer"><span class="pdf-tag">PDF</span><span class="download-arrow">→</span></div>
         </div>
       </a>
 
