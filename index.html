@@ -29,25 +29,29 @@
       font-family: 'Source Sans 3', sans-serif;
       background: var(--cream);
       color: var(--text);
-      font-size: 18px;
+      font-size: 19px;
     }
 
     /* ── NAV ── */
     nav {
       background: var(--white);
       border-bottom: 1px solid var(--border);
-      padding: 0 56px;
       height: 54px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       position: sticky;
       top: 0;
       z-index: 100;
     }
+    .nav-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
     .nav-name {
       font-family: 'Libre Baskerville', serif;
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 700;
       color: var(--slate-dark);
       letter-spacing: 0.01em;
@@ -58,7 +62,7 @@
       list-style: none;
     }
     .nav-links a {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--text-muted);
       text-decoration: none;
       font-weight: 400;
@@ -74,7 +78,7 @@
       border-bottom: 1px solid var(--border);
     }
     .hero-inner {
-      max-width: 900px;
+      max-width: 1160px;
       margin: 0 auto;
       padding: 0 24px;
       display: flex;
@@ -93,25 +97,25 @@
       align-items: center;
       justify-content: center;
       font-family: 'Libre Baskerville', serif;
-      font-size: 41px;
+      font-size: 44px;
       color: var(--slate);
     }
     .hero-content { flex: 1; }
     .hero-name {
       font-family: 'Libre Baskerville', serif;
-      font-size: 37px;
+      font-size: 40px;
       font-weight: 700;
       color: var(--slate-dark);
       margin-bottom: 6px;
     }
     .hero-title {
-      font-size: 18px;
+      font-size: 19px;
       color: var(--slate);
       font-weight: 400;
       margin-bottom: 16px;
     }
     .hero-bio {
-      font-size: 17px;
+      font-size: 18px;
       line-height: 1.75;
       color: var(--text-muted);
       max-width: 640px;
@@ -128,7 +132,7 @@
       gap: 6px;
       padding: 7px 16px;
       border-radius: 5px;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.15s;
@@ -147,7 +151,7 @@
 
     /* ── LAYOUT ── */
     .page-body {
-      max-width: 900px;
+      max-width: 1160px;
       margin: 0 auto;
       padding: 56px 24px 80px;
       display: flex;
@@ -157,7 +161,7 @@
 
     /* ── SECTION ── */
     .section-label {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -189,7 +193,7 @@
       padding: 18px 20px;
     }
     .about-card-label {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -197,7 +201,7 @@
       margin-bottom: 6px;
     }
     .about-card-val {
-      font-size: 16px;
+      font-size: 17px;
       color: var(--text);
       line-height: 1.5;
     }
@@ -213,12 +217,12 @@
     .exp-mini-row:first-child { padding-top: 0; }
     .exp-mini-row:last-child { border-bottom: none; padding-bottom: 0; }
     .exp-mini-co {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 600;
       color: var(--text);
     }
     .exp-mini-when {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 600;
       color: var(--slate);
       white-space: nowrap;
@@ -242,7 +246,7 @@
       box-shadow: 0 3px 12px rgba(0,0,0,0.05);
     }
     .pub-year {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 700;
       color: var(--slate);
       min-width: 36px;
@@ -252,14 +256,14 @@
     .pub-body { flex: 1; }
     .pub-title {
       font-family: 'Libre Baskerville', serif;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
       color: var(--text);
       line-height: 1.4;
       margin-bottom: 4px;
     }
     .pub-venue {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--slate);
       font-weight: 600;
       margin-bottom: 4px;
@@ -269,7 +273,7 @@
       align-items: center;
       gap: 5px;
       margin-top: 4px;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
       color: var(--accent);
       text-decoration: none;
@@ -283,7 +287,7 @@
       border-color: var(--accent);
     }
     .pub-link {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--slate-light);
       text-decoration: none;
       font-weight: 600;
@@ -292,7 +296,7 @@
     .pub-link:hover { color: var(--slate-dark); }
     .pub-tag {
       display: inline-block;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -322,16 +326,16 @@
       border-bottom: 1px solid var(--border);
       background: var(--cream);
     }
-    .research-cat-icon { font-size: 25px; flex-shrink: 0; margin-top: 2px; }
+    .research-cat-icon { font-size: 27px; flex-shrink: 0; margin-top: 2px; }
     .research-cat-title {
       font-family: 'Libre Baskerville', serif;
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 700;
       color: var(--slate-dark);
       margin-bottom: 4px;
     }
     .research-cat-desc {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--text-muted);
       line-height: 1.55;
     }
@@ -351,7 +355,7 @@
     }
     .pub-empty {
       padding: 20px 22px;
-      font-size: 15px;
+      font-size: 16px;
       color: var(--text-muted);
       font-style: italic;
     }
@@ -368,16 +372,16 @@
       border-radius: 8px;
       padding: 20px;
     }
-    .research-icon { font-size: 25px; margin-bottom: 10px; }
+    .research-icon { font-size: 27px; margin-bottom: 10px; }
     .research-title {
       font-family: 'Libre Baskerville', serif;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
       color: var(--text);
       margin-bottom: 6px;
     }
     .research-desc {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--text-muted);
       line-height: 1.6;
     }
@@ -391,7 +395,7 @@
       flex-wrap: wrap;
     }
     .semester-label {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--text-muted);
       font-weight: 600;
       text-transform: uppercase;
@@ -403,7 +407,7 @@
       background: var(--cream-dark);
       border: 1px solid var(--border);
       border-radius: 4px;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
       color: var(--slate);
       text-decoration: none;
@@ -426,7 +430,7 @@
       justify-content: space-between;
       gap: 16px;
     }
-    .code-text { font-size: 16px; color: var(--text-muted); line-height: 1.6; }
+    .code-text { font-size: 17px; color: var(--text-muted); line-height: 1.6; }
     .code-link {
       display: inline-flex;
       align-items: center;
@@ -435,7 +439,7 @@
       background: var(--slate);
       color: white;
       border-radius: 5px;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 600;
       text-decoration: none;
       white-space: nowrap;
@@ -458,18 +462,18 @@
     .teaching-left {}
     .teaching-course {
       font-family: 'Libre Baskerville', serif;
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 700;
       color: var(--text);
       margin-bottom: 4px;
     }
     .teaching-inst {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--slate);
       margin-bottom: 8px;
     }
     .teaching-desc {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--text-muted);
       line-height: 1.6;
       max-width: 520px;
@@ -482,7 +486,7 @@
       border: 1px solid rgba(61,90,115,0.35);
       color: var(--slate);
       border-radius: 5px;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 600;
       text-decoration: none;
       white-space: nowrap;
@@ -508,12 +512,12 @@
     }
     .exp-item:last-child { border-bottom: none; padding-bottom: 0; }
     .exp-role {
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 600;
       color: var(--text);
     }
     .exp-org {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--slate);
     }
 
@@ -537,7 +541,7 @@
       margin-bottom: 8px;
     }
     .activity-type {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -547,24 +551,24 @@
       border-radius: 3px;
     }
     .activity-date {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--text-muted);
     }
     .activity-title {
       font-family: 'Libre Baskerville', serif;
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 700;
       color: var(--text);
       margin-bottom: 6px;
     }
     .activity-desc {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--text-muted);
       line-height: 1.6;
       margin-bottom: 10px;
     }
     .activity-link {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
       color: var(--slate);
       text-decoration: none;
@@ -599,7 +603,7 @@
       border: 1px solid var(--border);
       background: var(--white);
       color: var(--slate);
-      font-size: 21px;
+      font-size: 23px;
       line-height: 1;
       cursor: pointer;
       display: flex;
@@ -641,12 +645,12 @@
       position: absolute;
       right: 28px;
       top: 20px;
-      font-size: 55px;
+      font-size: 59px;
       color: rgba(255,255,255,0.06);
     }
     .spotlight-badge {
       display: inline-block;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -658,14 +662,14 @@
     }
     .spotlight-title {
       font-family: 'Libre Baskerville', serif;
-      font-size: 21px;
+      font-size: 23px;
       font-weight: 700;
       color: #ffffff;
       margin-bottom: 8px;
       line-height: 1.35;
     }
     .spotlight-desc {
-      font-size: 16px;
+      font-size: 17px;
       color: rgba(255,255,255,0.55);
       line-height: 1.7;
       max-width: 580px;
@@ -679,7 +683,7 @@
       background: rgba(255,255,255,0.12);
       border: 1px solid rgba(255,255,255,0.2);
       border-radius: 5px;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 600;
       color: #ffffff;
       text-decoration: none;
@@ -701,7 +705,7 @@
       margin-top: 18px;
     }
     .spotlight-tag {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
       letter-spacing: 0.06em;
       color: rgba(255,255,255,0.7);
@@ -712,7 +716,7 @@
     }
     /* ── INSIGHTS ── */
     .insights-intro {
-      font-size: 16px;
+      font-size: 17px;
       color: var(--text-muted);
       line-height: 1.7;
       margin-bottom: 20px;
@@ -743,7 +747,7 @@
       border-style: dashed;
     }
     .insight-type {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -756,18 +760,18 @@
     }
     .insight-title {
       font-family: 'Libre Baskerville', serif;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
       color: var(--text);
       line-height: 1.35;
     }
     .insight-desc {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--text-muted);
       line-height: 1.55;
     }
     .insight-date {
-      font-size: 13px;
+      font-size: 14px;
       color: var(--text-muted);
       margin-top: auto;
     }
@@ -794,9 +798,9 @@
       border-color: rgba(61,90,115,0.3);
       box-shadow: 0 3px 10px rgba(0,0,0,0.05);
     }
-    .contact-icon { font-size: 23px; }
-    .contact-label { font-size: 14px; color: var(--text-muted); }
-    .contact-val { font-size: 15px; color: var(--slate); font-weight: 600; }
+    .contact-icon { font-size: 25px; }
+    .contact-label { font-size: 15px; color: var(--text-muted); }
+    .contact-val { font-size: 16px; color: var(--slate); font-weight: 600; }
 
     /* ── FOOTER ── */
     footer {
@@ -808,16 +812,15 @@
       flex-wrap: wrap;
       gap: 10px;
     }
-    .footer-name { font-size: 15px; color: rgba(255,255,255,0.6); }
-    .footer-copy { font-size: 14px; color: rgba(255,255,255,0.3); }
+    .footer-name { font-size: 16px; color: rgba(255,255,255,0.6); }
+    .footer-copy { font-size: 15px; color: rgba(255,255,255,0.3); }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 700px) {
-      nav { padding: 0 20px; }
       .nav-links { display: none; }
       .hero { padding: 36px 0; }
       .hero-inner { flex-direction: column; gap: 24px; }
-      .hero-name { font-size: 28px; }
+      .hero-name { font-size: 30px; }
       .about-grid, .research-grid { grid-template-columns: 1fr; }
       .teaching-card { flex-direction: column; align-items: flex-start; }
       .code-block { flex-direction: column; align-items: flex-start; }
@@ -828,7 +831,7 @@
 <body>
 
   <nav>
-    <div class="nav-name"></div>
+    <div class="nav-inner">
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#activities">Activities</a></li>
@@ -838,6 +841,7 @@
       <li><a href="#insights">Insights</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    </div>
   </nav>
 
   <div class="hero">
