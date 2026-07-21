@@ -1955,6 +1955,31 @@
       insightIdx = i;
       updateInsight();
     }
+
+    /* Auto-advance both carousels every 5s, staggered so they alternate.
+       Pauses while the visitor hovers a slider, resets after manual clicks,
+       and stays still for visitors who prefer reduced motion. */
+    (function () {
+      const AUTO_MS = 5000, OFFSET_MS = 2500;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let spotTimer = null, insightTimer = null;
+      function armSpot()    { if (reduceMotion) return; clearInterval(spotTimer);    spotTimer    = setInterval(function () { spotIdx    = (spotIdx    + 1) % spotTotal;    updateSpotlight(); }, AUTO_MS); }
+      function armInsight() { if (reduceMotion) return; clearInterval(insightTimer); insightTimer = setInterval(function () { insightIdx = (insightIdx + 1) % insightTotal; updateInsight();   }, AUTO_MS); }
+      /* wrap the manual handlers so a click restarts that slider's countdown */
+      const _ms = moveSpotlight, _gs = goSpotlight, _mi = moveInsight, _gi = goInsight;
+      moveSpotlight = function (d) { _ms(d); armSpot();    };
+      goSpotlight   = function (i) { _gs(i); armSpot();    };
+      moveInsight   = function (d) { _mi(d); armInsight(); };
+      goInsight     = function (i) { _gi(i); armInsight(); };
+      /* pause on hover */
+      const ss = document.querySelector('.spotlight-slider');
+      if (ss) { ss.addEventListener('mouseenter', function () { clearInterval(spotTimer); });    ss.addEventListener('mouseleave', armSpot); }
+      const is = document.querySelector('.insights-slider');
+      if (is) { is.addEventListener('mouseenter', function () { clearInterval(insightTimer); }); is.addEventListener('mouseleave', armInsight); }
+      /* start — offset the insights track so the two move alternately */
+      armSpot();
+      setTimeout(armInsight, OFFSET_MS);
+    })();
   </script>
 
 </body>
