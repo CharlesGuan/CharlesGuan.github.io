@@ -1328,10 +1328,10 @@
           <div class="insight-title">What Is an AI Agent, Really?</div>
           <div class="insight-desc">
             What separates an agent from a chatbot: the <strong>perceive–think–act loop</strong>, and what
-            lives inside the thinking — <strong>memory</strong> (what it carries between tasks), <strong>planning</strong>
+            lives inside the thinking — memory (what it carries between tasks), planning
             (guess once, or look ahead first), a <strong>world model</strong> (imagining a step before taking it),
-            <strong>motivation</strong> (reward, and how goals go wrong), and <strong>tools</strong> (its reach into the world).
-            Then: how one agent is built, how <strong>many agents</strong> organize, how you <strong>evaluate</strong> a path
+            motivation (reward, and how goals go wrong), and tools (its reach into the world).
+            Then: how one agent is built, how many agents organize, how you evaluate a path
             rather than an answer, and where <strong>safety</strong> breaks. Drawn from three recent surveys.
           </div>
           <div class="insight-figure">
@@ -1395,16 +1395,101 @@
           <div class="insight-note">Note: the demo video — including the presenter's voice and likeness — is synthesized by AI.</div>
         </div>
 
+        <div class="insight-card insight-featured">
+          <div class="insight-type">Ad-hoc Topic</div>
+          <div class="insight-title">From Video Generation to World Models</div>
+          <div class="insight-desc">
+            Over five years, the goal of video AI shifted from <strong>making pixels move</strong> to
+            <strong>modeling how the world works</strong> — from GANs that just fought flicker, to diffusion
+            models that made frames sharp, to world models that simulate physics and respond to
+            your actions. The hard part was never drawing one frame; it's the <strong>temporal gap</strong> —
+            staying consistent over time (a character's red shirt stays red for all 300 frames),
+            at compute that grows cubically with clip length, using far less labeled video. The
+            frontier is interactive: not watching a car drive, but pressing "turn left" and having
+            the world respond — and remember what's behind you. Drawn from two 2026 surveys on
+            video generative foundations and interactive world models.
+          </div>
+          <div class="insight-figure">
+            <svg width="100%" viewBox="0 0 640 232" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Left: a video generator plays pixels back, so when the car turns around the building has drifted away and there is no memory. Right: a world model responds to a 'turn left' control and keeps the same building in place, remembering the scene.">
+
+              <!-- ── LEFT: video generator (passive playback) ── -->
+              <text x="20" y="20" font-size="10" font-weight="700" letter-spacing="1.5" fill="#B4552F">VIDEO GENERATOR</text>
+              <text x="20" y="36" font-size="10.5" fill="#9C8A7A" font-style="italic">plays pixels back — no memory</text>
+
+              <!-- ground -->
+              <line x1="22" y1="150" x2="286" y2="150" stroke="#D9CFBE" stroke-width="1.4"/>
+
+              <!-- ghost / drifted building -->
+              <rect x="176" y="86" width="58" height="64" rx="2" fill="#EDEAE3" stroke="#C9C4B8" stroke-width="1.3" stroke-dasharray="5 4"/>
+              <line x1="205" y1="86" x2="205" y2="150" stroke="#D8D2C4" stroke-width="1" stroke-dasharray="4 4"/>
+              <text x="205" y="122" font-size="20" text-anchor="middle" fill="#B9B1A1" font-weight="700">?</text>
+              <text x="205" y="168" font-size="9.5" text-anchor="middle" fill="#9C9689" font-style="italic">drifted away</text>
+
+              <!-- car (facing left, "turned around") -->
+              <g>
+                <rect x="46" y="128" width="62" height="18" rx="6" fill="#FBEDE6" stroke="#D9754F" stroke-width="1.3"/>
+                <path d="M58 128 q6 -12 20 -12 h10 q10 0 14 12 Z" fill="#FBEDE6" stroke="#D9754F" stroke-width="1.3"/>
+                <circle cx="60" cy="148" r="6.5" fill="#FFFFFF" stroke="#D9754F" stroke-width="1.4"/>
+                <circle cx="96" cy="148" r="6.5" fill="#FFFFFF" stroke="#D9754F" stroke-width="1.4"/>
+              </g>
+
+              <!-- turn-around arrow -->
+              <path d="M118 118 q40 -30 78 6" fill="none" stroke="#D9754F" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M196 130 l-2 -12 l-9 7 Z" fill="#D9754F"/>
+              <text x="150" y="98" font-size="9.5" text-anchor="middle" fill="#B4552F">turn around…</text>
+
+              <!-- caption -->
+              <text x="20" y="204" font-size="11.5" fill="#3D3D3D">Turn back and the building has</text>
+              <text x="20" y="220" font-size="11.5" fill="#3D3D3D">changed — the scene forgot itself.</text>
+
+              <!-- divider -->
+              <line x1="320" y1="26" x2="320" y2="214" stroke="#DAD4C6" stroke-width="1" stroke-dasharray="5 5"/>
+
+              <!-- ── RIGHT: world model (interactive + consistent) ── -->
+              <text x="356" y="20" font-size="10" font-weight="700" letter-spacing="1.5" fill="#2A3F52">WORLD MODEL</text>
+              <text x="356" y="36" font-size="10.5" fill="#5B7A94" font-style="italic">responds, obeys physics, remembers</text>
+
+              <!-- ground -->
+              <line x1="358" y1="150" x2="622" y2="150" stroke="#B9C4CE" stroke-width="1.4"/>
+
+              <!-- persistent building (unchanged) -->
+              <rect x="520" y="86" width="58" height="64" rx="2" fill="rgba(61,90,115,0.10)" stroke="#3D5A73" stroke-width="1.5"/>
+              <rect x="531" y="98" width="14" height="14" fill="#FFFFFF" stroke="#3D5A73" stroke-width="1"/>
+              <rect x="553" y="98" width="14" height="14" fill="#FFFFFF" stroke="#3D5A73" stroke-width="1"/>
+              <rect x="531" y="120" width="14" height="14" fill="#FFFFFF" stroke="#3D5A73" stroke-width="1"/>
+              <rect x="553" y="120" width="14" height="14" fill="#FFFFFF" stroke="#3D5A73" stroke-width="1"/>
+              <text x="549" y="168" font-size="9.5" text-anchor="middle" fill="#2F5F38" font-weight="600">stays put ✓</text>
+
+              <!-- car (facing right) -->
+              <g>
+                <rect x="386" y="128" width="62" height="18" rx="6" fill="rgba(61,90,115,0.10)" stroke="#3D5A73" stroke-width="1.4"/>
+                <path d="M398 128 q6 -12 20 -12 h10 q10 0 14 12 Z" fill="rgba(61,90,115,0.10)" stroke="#3D5A73" stroke-width="1.4"/>
+                <circle cx="400" cy="148" r="6.5" fill="#FFFFFF" stroke="#3D5A73" stroke-width="1.5"/>
+                <circle cx="436" cy="148" r="6.5" fill="#FFFFFF" stroke="#3D5A73" stroke-width="1.5"/>
+              </g>
+
+              <!-- control key -->
+              <rect x="396" y="96" width="86" height="24" rx="5" fill="#FFFFFF" stroke="#3D5A73" stroke-width="1.2"/>
+              <text x="439" y="112" font-size="11" font-weight="700" text-anchor="middle" fill="#2A3F52">← turn left</text>
+
+              <!-- response arrow from key to car -->
+              <path d="M439 120 l0 6" stroke="#3D5A73" stroke-width="1.3"/>
+              <path d="M439 130 l-4 -8 l8 0 Z" fill="#3D5A73"/>
+
+              <!-- caption -->
+              <text x="356" y="204" font-size="11.5" font-weight="600" fill="#2F5F38">Press "turn left" — the world turns,</text>
+              <text x="356" y="220" font-size="11.5" font-weight="600" fill="#2F5F38">and the building is right where you left it.</text>
+            </svg>
+          </div>
+          <div class="insight-links">
+            <a class="insight-pill" href="insights/multimodal.pdf" target="_blank">Slides (PDF)</a>
+          </div>
+        </div>
+
         <div class="insight-card insight-coming">
           <div class="insight-type">Research Insight</div>
           <div class="insight-title">Coming Soon</div>
           <div class="insight-desc">Short-form research notes and interesting findings from my work.</div>
-        </div>
-
-        <div class="insight-card insight-coming">
-          <div class="insight-type">Ad-hoc Topic</div>
-          <div class="insight-title">Coming Soon</div>
-          <div class="insight-desc">Thoughts on emerging topics, tools, and ideas I'm exploring.</div>
         </div>
 
       </div>
