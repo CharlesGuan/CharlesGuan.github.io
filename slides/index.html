@@ -91,6 +91,22 @@
     .meta-val { font-size: 14px; color: rgba(255,255,255,0.8); font-weight: 400; }
 
     /* COURSE OUTLINE */
+    .desc-section {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 0;
+    }
+    .desc-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+    .desc-para {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text);
+      margin-top: 18px;
+    }
     .outline-section {
       background: var(--cream);
       border-bottom: 1px solid var(--border);
@@ -193,6 +209,16 @@
     <div class="hero-meta">
       <div class="meta-item"><span class="meta-label">Lectures</span><span class="meta-val">12 Weeks</span></div>
       <div class="meta-item"><span class="meta-label">Format</span><span class="meta-val">PDF Slides</span></div>
+    </div>
+  </div>
+
+  <div class="desc-section">
+    <div class="desc-inner">
+      <div class="section-header">
+        <h2 class="section-title">Course Description</h2>
+      </div>
+      <p class="desc-para">AI is reshaping asset management across a range of core applications: predicting market movements with foundation models, interpreting filings, earnings calls, and news by fine-tuning LLMs for sentiment analysis, mapping the relationships among companies, events, and themes with graph neural networks, summarizing vast financial reports, generating research commentary, and harnessing agents to automate analyst tasks. This course introduces the theories and approaches behind building them.</p>
+      <p class="desc-para">The course progresses from foundations to the frontier: attention and transformers, and scaling efficiently across training, post-training, test-time compute, and agentic scaling. From there we delve into various optimizations, multi-token prediction, prompting and RAG, chain-of-thought reasoning, reinforcement learning for alignment from RLHF to policy learning, and finally AI agents — their skills, harnesses, memory management, and recursive self-improvement.</p>
     </div>
   </div>
 
